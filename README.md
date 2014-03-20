@@ -11,46 +11,58 @@ These benchmarks are the output of the `pword_hash_benchmark.py` script.
 
 ```
 Algorithm: md5
-Benchmark run time (seconds): 5.68
-Iterations: 422267
-End user calcuted time for iterations (microseconds): 501284
-Hex Digest: 36e0a31298e02aef78f9e81709e4a357
-Base64 Digest: NuCjEpjgKu94+egXCeSjVw==
+Benchmark run time (seconds): 4.07
+Iterations: 427237
+End user calcuted time for iterations (microseconds): 503287
+Hex Digest: 49f5a9ea663cc188befdb629a101342c
+Base64 Digest: SfWp6mY8wYi+/bYpoQE0LA==
+AES Encrypted Base64 Digest: Ytht5Njgz5vJ0m9feiG7Ml7KK87bU9n2fKRbMelEThs=
+AES Decrypted Base64 Digest: SfWp6mY8wYi+/bYpoQE0LA==
 
 Algorithm: sha1
-Benchmark run time (seconds): 3.99
-Iterations: 377438
-End user calcuted time for iterations (microseconds): 507053
-Hex Digest: ce064e13bebe7704e45519b4fef283f62f6cff73
-Base64 Digest: zgZOE76+dwTkVRm0/vKD9i9s/3M=
+Benchmark run time (seconds): 5.06
+Iterations: 397563
+End user calcuted time for iterations (microseconds): 502847
+Hex Digest: 31ce5993abcc72fdad00f7e9a32647e5457cb7fe
+Base64 Digest: Mc5Zk6vMcv2tAPfpoyZH5UV8t/4=
+AES Encrypted Base64 Digest: KCxuOEXk/p0AaUAb9XL7nsfHEIupYnpzCOgYi1bMheU=
+AES Decrypted Base64 Digest: Mc5Zk6vMcv2tAPfpoyZH5UV8t/4=
 
 Algorithm: sha224
-Benchmark run time (seconds): 1.63
-Iterations: 208756
-End user calcuted time for iterations (microseconds): 502383
-Hex Digest: ce9e1e8eb057df7f2a385268238a992553b6392a72d3864890623a7b
-Base64 Digest: zp4ejrBX338qOFJoI4qZJVO2OSpy04ZIkGI6ew==
+Benchmark run time (seconds): 1.65
+Iterations: 228805
+End user calcuted time for iterations (microseconds): 502781
+Hex Digest: b9e023977d9bed335090fc4bad1a900c6db3dfca3e18fb2b2e3b8cfc
+Base64 Digest: ueAjl32b7TNQkPxLrRqQDG2z38o+GPsrLjuM/A==
+AES Encrypted Base64 Digest: aXX2NXY2dCfX6KnGaJioLJ3DBOX+STLeTvYv6eo0swZlEOC8yEhtSBttvufv6zQMTYaL556alI1nQKzZMmW2WA==
+AES Decrypted Base64 Digest: ueAjl32b7TNQkPxLrRqQDG2z38o+GPsrLjuM/A==
 
 Algorithm: sha256
-Benchmark run time (seconds): 4.41
-Iterations: 217354
-End user calcuted time for iterations (microseconds): 500243
-Hex Digest: a82f37ea2ccdecd5d78a66e6419cb825a9a1cd92a0d6419b2f9762f80173b673
-Base64 Digest: qC836izN7NXXimbmQZy4JamhzZKg1kGbL5di+AFztnM=
+Benchmark run time (seconds): 1.67
+Iterations: 223934
+End user calcuted time for iterations (microseconds): 509683
+Hex Digest: dd1cc4871d6251fd9ba95cce346b623941e3ca855a8099e36f0eb0d728614de0
+Base64 Digest: 3RzEhx1iUf2bqVzONGtiOUHjyoVagJnjbw6w1yhhTeA=
+AES Encrypted Base64 Digest: Oz5PfUwcmPXaRjAHgOkDlPtlPxVGfFV24gyqVZDWy3v88sXV7zvkhIZ5JY1g9PuBTYaL556alI1nQKzZMmW2WA==
+AES Decrypted Base64 Digest: 3RzEhx1iUf2bqVzONGtiOUHjyoVagJnjbw6w1yhhTeA=
 
 Algorithm: sha384
-Benchmark run time (seconds): 8.20
-Iterations: 343489
-End user calcuted time for iterations (microseconds): 499149
-Hex Digest: f2e360ef380b3c211a109828718181d312999abc050556bf8a061862e96b32b2e29d68bb92637d5431c87009221d904e
-Base64 Digest: 8uNg7zgLPCEaEJgocYGB0xKZmrwFBVa/igYYYulrMrLinWi7kmN9VDHIcAkiHZBO
+Benchmark run time (seconds): 2.68
+Iterations: 226513
+End user calcuted time for iterations (microseconds): 501515
+Hex Digest: 6090e804a325fef6f687f999400a13f800147488bd31ebb99a3dfe68157ad07a903ee22f7fd5a80c397ea12e641421f6
+Base64 Digest: YJDoBKMl/vb2h/mZQAoT+AAUdIi9Meu5mj3+aBV60HqQPuIvf9WoDDl+oS5kFCH2
+AES Encrypted Base64 Digest: mMRNHCw5XjWi5Z9xkATv+5Zcb9vHWC32b6U317PslAtGDQgSfeKDN0DRwS+fOmaS1Kz6RssZUd2AuntEoxv24k2Gi+eempSNZ0Cs2TJltlhNhovnnpqUjWdArNkyZbZY
+AES Decrypted Base64 Digest: YJDoBKMl/vb2h/mZQAoT+AAUdIi9Meu5mj3+aBV60HqQPuIvf9WoDDl+oS5kFCH2
 
 Algorithm: sha512
-Benchmark run time (seconds): 2.19
-Iterations: 210719
-End user calcuted time for iterations (microseconds): 506117
-Hex Digest: f24cf9419c725b2e0fad47d92fcf217b67de353c930f48a168425114fce2a30497f37d2c1fb3defd39d74721b6cc2da866031d1091dd3a5249876ad9d5776eb3
-Base64 Digest: 8kz5QZxyWy4PrUfZL88he2feNTyTD0ihaEJRFPziowSX830sH7Pe/TnXRyG2zC2oZgMdEJHdOlJJh2rZ1Xdusw==
+Benchmark run time (seconds): 2.75
+Iterations: 202731
+End user calcuted time for iterations (microseconds): 505061
+Hex Digest: 025520812d7a4f08b4d0e54787b8fd7e8ed25c8ae90780c58de3293635f8c52cda9051c93a342d1e739cd9cfd06b59608fd5a27e635a9af1dd47d02d623a8c35
+Base64 Digest: AlUggS16Twi00OVHh7j9fo7SXIrpB4DFjeMpNjX4xSzakFHJOjQtHnOc2c/Qa1lgj9WifmNamvHdR9AtYjqMNQ==
+AES Encrypted Base64 Digest: U+uqI8RJT1awLS2lYVEqDA7jJL8LxAmbF87lg87J90gSei0ntUHJLHw3isb/x4cASCpbUfKdKeOhDyrtgbwd+OZcTgOuA1abBLMjmO57If3D15db7G7rdP1ToOFTJcll
+AES Decrypted Base64 Digest: AlUggS16Twi00OVHh7j9fo7SXIrpB4DFjeMpNjX4xSzakFHJOjQtHnOc2c/Qa1lgj9WifmNamvHdR9AtYjqMNQ==
 
 ```
 
