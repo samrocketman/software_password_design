@@ -11,46 +11,46 @@ These benchmarks are the output of the `pword_hash_benchmark.py` script.
 
 ```
 Algorithm: md5
-Benchmark run time (seconds): 3.82
-Iterations: 434823
-End user calcuted time for iterations (microseconds): 506467
-Hex Digest: 77149fdf85a361b6b0365fab5f429c5a
-Base64 Digest: dxSf34WjYbawNl+rX0KcWg==
+Benchmark run time (seconds): 5.68
+Iterations: 422267
+End user calcuted time for iterations (microseconds): 501284
+Hex Digest: 36e0a31298e02aef78f9e81709e4a357
+Base64 Digest: NuCjEpjgKu94+egXCeSjVw==
 
 Algorithm: sha1
 Benchmark run time (seconds): 3.99
-Iterations: 410879
-End user calcuted time for iterations (microseconds): 508803
-Hex Digest: fa4124bfdc924a7861efc260f889576c097d545b
-Base64 Digest: +kEkv9ySSnhh78Jg+IlXbAl9VFs=
+Iterations: 377438
+End user calcuted time for iterations (microseconds): 507053
+Hex Digest: ce064e13bebe7704e45519b4fef283f62f6cff73
+Base64 Digest: zgZOE76+dwTkVRm0/vKD9i9s/3M=
 
 Algorithm: sha224
-Benchmark run time (seconds): 1.64
-Iterations: 228632
-End user calcuted time for iterations (microseconds): 502472
-Hex Digest: 65cd45e4afabfeef1436325a884de5434cf4b0de570ae7066c376914
-Base64 Digest: Zc1F5K+r/u8UNjJaiE3lQ0z0sN5XCucGbDdpFA==
+Benchmark run time (seconds): 1.63
+Iterations: 208756
+End user calcuted time for iterations (microseconds): 502383
+Hex Digest: ce9e1e8eb057df7f2a385268238a992553b6392a72d3864890623a7b
+Base64 Digest: zp4ejrBX338qOFJoI4qZJVO2OSpy04ZIkGI6ew==
 
 Algorithm: sha256
-Benchmark run time (seconds): 4.49
-Iterations: 231123
-End user calcuted time for iterations (microseconds): 505635
-Hex Digest: e022878f5ee557b63e75bc94d57b4534da7b9b48a5404a41f82012401d86894f
-Base64 Digest: 4CKHj17lV7Y+dbyU1XtFNNp7m0ilQEpB+CASQB2GiU8=
+Benchmark run time (seconds): 4.41
+Iterations: 217354
+End user calcuted time for iterations (microseconds): 500243
+Hex Digest: a82f37ea2ccdecd5d78a66e6419cb825a9a1cd92a0d6419b2f9762f80173b673
+Base64 Digest: qC836izN7NXXimbmQZy4JamhzZKg1kGbL5di+AFztnM=
 
 Algorithm: sha384
-Benchmark run time (seconds): 1.65
-Iterations: 227277
-End user calcuted time for iterations (microseconds): 505260
-Hex Digest: 68fd320c11ec42c61f50c8bdf3c4b1d1b07d97e2d247f8d85aa75f4b4c80e9c8aa1c36f5ee0ac714d24c0d64899ba479
-Base64 Digest: aP0yDBHsQsYfUMi988Sx0bB9l+LSR/jYWqdfS0yA6ciqHDb17grHFNJMDWSJm6R5
+Benchmark run time (seconds): 8.20
+Iterations: 343489
+End user calcuted time for iterations (microseconds): 499149
+Hex Digest: f2e360ef380b3c211a109828718181d312999abc050556bf8a061862e96b32b2e29d68bb92637d5431c87009221d904e
+Base64 Digest: 8uNg7zgLPCEaEJgocYGB0xKZmrwFBVa/igYYYulrMrLinWi7kmN9VDHIcAkiHZBO
 
 Algorithm: sha512
-Benchmark run time (seconds): 1.66
-Iterations: 206657
-End user calcuted time for iterations (microseconds): 505808
-Hex Digest: d295741215b7fb6a3228414686a5b851827f519724cd6aea6d812bf96b421e7839404c8ef74ab36afda87ec6396cc6217a4cb19995e5a92f581e3aeb1d81d3b5
-Base64 Digest: 0pV0EhW3+2oyKEFGhqW4UYJ/UZckzWrqbYEr+WtCHng5QEyO90qzav2ofsY5bMYhekyxmZXlqS9YHjrrHYHTtQ==
+Benchmark run time (seconds): 2.19
+Iterations: 210719
+End user calcuted time for iterations (microseconds): 506117
+Hex Digest: f24cf9419c725b2e0fad47d92fcf217b67de353c930f48a168425114fce2a30497f37d2c1fb3defd39d74721b6cc2da866031d1091dd3a5249876ad9d5776eb3
+Base64 Digest: 8kz5QZxyWy4PrUfZL88he2feNTyTD0ihaEJRFPziowSX830sH7Pe/TnXRyG2zC2oZgMdEJHdOlJJh2rZ1Xdusw==
 
 ```
 
