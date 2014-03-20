@@ -7,44 +7,50 @@ That being said here I'll show you some simple benchmarks as well as make a prop
 
 # Simple benchmarks
 
-Please understand that these benchmarks are indeed simple.  It calculates the time every other hash iteration so in practice slightly more hashes per second are possible without calculating the time.
+These benchmarks are the output of the `pword_hash_benchmark.py` script.
 
 ```
 Algorithm: md5
-Run time (microseconds): 500000
-Iterations: 180850
-Hex Digest: 92dc5e5fe54f2caee528f04e2010e625
-Base64 Digest: ktxeX+VPLK7lKPBOIBDmJQ==
+Benchmark run time (seconds): 3.82
+Iterations: 434823
+End user calcuted time for iterations (microseconds): 506467
+Hex Digest: 77149fdf85a361b6b0365fab5f429c5a
+Base64 Digest: dxSf34WjYbawNl+rX0KcWg==
 
 Algorithm: sha1
-Run time (microseconds): 500004
-Iterations: 173812
-Hex Digest: ba8feb69fa02c9e98ae68dc5bf0e1c6e4f2b95a2
-Base64 Digest: uo/rafoCyemK5o3Fvw4cbk8rlaI=
+Benchmark run time (seconds): 3.99
+Iterations: 410879
+End user calcuted time for iterations (microseconds): 508803
+Hex Digest: fa4124bfdc924a7861efc260f889576c097d545b
+Base64 Digest: +kEkv9ySSnhh78Jg+IlXbAl9VFs=
 
 Algorithm: sha224
-Run time (microseconds): 500000
-Iterations: 130622
-Hex Digest: eb7b1d0b9bef805c57bf1460009a1047805fabb18cb003397708c49d
-Base64 Digest: 63sdC5vvgFxXvxRgAJoQR4Bfq7GMsAM5dwjEnQ==
+Benchmark run time (seconds): 1.64
+Iterations: 228632
+End user calcuted time for iterations (microseconds): 502472
+Hex Digest: 65cd45e4afabfeef1436325a884de5434cf4b0de570ae7066c376914
+Base64 Digest: Zc1F5K+r/u8UNjJaiE3lQ0z0sN5XCucGbDdpFA==
 
 Algorithm: sha256
-Run time (microseconds): 500004
-Iterations: 129020
-Hex Digest: ada8c7a66a8b43689d8ab41bc51ef0428087bd9368466b71a5464edbc0ce7474
-Base64 Digest: rajHpmqLQ2idirQbxR7wQoCHvZNoRmtxpUZO28DOdHQ=
+Benchmark run time (seconds): 4.49
+Iterations: 231123
+End user calcuted time for iterations (microseconds): 505635
+Hex Digest: e022878f5ee557b63e75bc94d57b4534da7b9b48a5404a41f82012401d86894f
+Base64 Digest: 4CKHj17lV7Y+dbyU1XtFNNp7m0ilQEpB+CASQB2GiU8=
 
 Algorithm: sha384
-Run time (microseconds): 500005
-Iterations: 126532
-Hex Digest: a57013b87993679fc92a27522a26fe09b378be68488c124ee7f55757a897c306aa1f7d3f339711d627a5f399a263ee4b
-Base64 Digest: pXATuHmTZ5/JKidSKib+CbN4vmhIjBJO5/VXV6iXwwaqH30/M5cR1iel85miY+5L
+Benchmark run time (seconds): 1.65
+Iterations: 227277
+End user calcuted time for iterations (microseconds): 505260
+Hex Digest: 68fd320c11ec42c61f50c8bdf3c4b1d1b07d97e2d247f8d85aa75f4b4c80e9c8aa1c36f5ee0ac714d24c0d64899ba479
+Base64 Digest: aP0yDBHsQsYfUMi988Sx0bB9l+LSR/jYWqdfS0yA6ciqHDb17grHFNJMDWSJm6R5
 
 Algorithm: sha512
-Run time (microseconds): 500097
-Iterations: 118988
-Hex Digest: e77285174dfa3aba639ae456038c329542b2d7741f84918b0d04fdc5ab2426ac7e66ad38c56498a914e7818118b09cc62d071fca9cf40ec0a79f4cb37611a6e5
-Base64 Digest: 53KFF036OrpjmuRWA4wylUKy13QfhJGLDQT9xaskJqx+Zq04xWSYqRTngYEYsJzGLQcfypz0DsCnn0yzdhGm5Q==
+Benchmark run time (seconds): 1.66
+Iterations: 206657
+End user calcuted time for iterations (microseconds): 505808
+Hex Digest: d295741215b7fb6a3228414686a5b851827f519724cd6aea6d812bf96b421e7839404c8ef74ab36afda87ec6396cc6217a4cb19995e5a92f581e3aeb1d81d3b5
+Base64 Digest: 0pV0EhW3+2oyKEFGhqW4UYJ/UZckzWrqbYEr+WtCHng5QEyO90qzav2ofsY5bMYhekyxmZXlqS9YHjrrHYHTtQ==
 
 ```
 
@@ -73,7 +79,11 @@ Username | Password (hashed+encrypted) | Salt | Iterations
 
 The reason why the iterations are stored in the database is because it should be updated as performance in your service is upgraded.  This means if you get more robust hardware (i.e. replace it every few years) you'll get stronger password storage out of the box with little effort.
 
-So I propose doing the following.  When your application first starts up it runs a quick benchmark on the number of password hash iterations it can perform in say `500ms` (or some arbitrary time you're willing to wait for the hash to be computed on your hosted system).  This will be the estimated performance metric for the number of iterations the password should be hashed.  All new passwords will be
+So I propose doing the following.  When your application first starts up it runs a quick benchmark on the number of password hash iterations it can perform in say `500ms` (or some arbitrary time you're willing to wait for the hash to be computed on your hosted system).  This will be the estimated performance metric for the number of iterations the password should be hashed.  All new passwords will be be created with this number of hashes.
+
+If your application restarts then the benchmark calculation for number of iterations is run during startup.  This will be the new value.  If an existing user is logging in and the number of iterations their stored password is hashed is different beyond a threshold then their hash will be recalculated with the new system benchmark for number of hash iterations.  In addition to the user login hash recalculation there should be an external job that periodically runs to adjust the hashes of the users based on the benchmarked number of iterations stored in the database for the current runtime.
+
+With this method the strength of your password hashing should increase as the performance of the systems your service lies on increases at no extra cost to you.
 
 [1]: http://plaintextoffenders.com/
 [2]: https://crackstation.net/hashing-security.htm
