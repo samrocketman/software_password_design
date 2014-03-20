@@ -40,7 +40,7 @@ def bench_hash_iterations(algorithm,password,salt,hash_target_time):
   lastiterations=0
   cancelcount=0
   startcancelcount=False
-  while endtime2.microseconds < hash_target_time or endtime2.microseconds - hash_target_time > threshold:
+  while ( endtime2.microseconds < hash_target_time and endtime2.microseconds < hash_target_time - threshold ) or endtime2.microseconds - hash_target_time > threshold:
     hash_obj2=hashlib.new(name=algorithm,string=password+salt)
     starttime=datetime.datetime.now()
     i=1
